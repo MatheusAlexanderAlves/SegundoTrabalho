@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Logo-Topo {
+  height: 60px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 10px;
+  left: 0;
+}
+
+.Header-Content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+main {
+  padding: 20px;
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #333;
+  padding: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 30px 0;
+}
+
+.sidebar a {
+  color: rgb(197, 196, 196);
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+  text-decoration: solid;
+  transition: 0.3s;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  display: grid;
+  grid-area: header;
+}
+
+footer {
+  display: grid;
+  background-color: black;
+  color: white;
+  text-align: center;
+  grid-column: span 2;
+  bottom: 0;
+  grid-area: footer;
+}
+
+/* Responsividade para tablet igual o slide */
+@media (max-width: 1024px) {
+  .container {
+    font-size: 18px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  @media (max-width: 768px) {
+    .container {
+      font-size: 16px;
+    }
+  }
+
+  .sidebar {
+    text-align: center;
+  }
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  font-size: 20px;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar main main"
+    "footer footer footer";
+}
